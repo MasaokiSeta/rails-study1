@@ -40,6 +40,7 @@ class Task < ApplicationRecord
 
   belongs_to :user
 
+  # controller(viewも？)からtask.recentという要領で利用できる
   scope :recent, -> { order(created_at: :desc) }
 
   private
