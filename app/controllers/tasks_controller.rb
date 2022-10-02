@@ -55,7 +55,8 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to tasks_url, notice: "タスク「#{@task.name}」を削除しました。"
+    # redirect_to tasks_url, notice: "タスク「#{@task.name}」を削除しました。"
+    # head :no_content
   end
 
   def import
